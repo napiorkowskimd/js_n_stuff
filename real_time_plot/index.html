@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script src="model.js"></script>
+        <script src="plotter.js"></script>
+    </head>
+<body>
+    <div id = "container"></div>
+</body>
+    <script>
+function main() {
+    class Provider {
+        poll() {
+            return {
+                    "name": "asdf",
+                    "timestamp": performance.now(),
+                    "value": 50*Math.sin(performance.now() / 100) + 50
+                }
+            
+        }
+    }
+
+    var model = new Model(new Provider())
+    var container = document.getElementById("container")
+    var plotter = new Plotter(container)
+    plotter.addModel(model)
+    plotter.play()
+    model.feed()
+}
+window.onload = main
+    </script>
+
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "real_time_plot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "model.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0"
+  }
+}
